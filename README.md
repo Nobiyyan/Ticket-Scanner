@@ -12,7 +12,7 @@ This is a simple barcode and QR code scanning application used for ticket valida
 ## 🛠 Installation  
 1. **Clone this repository:**  
    ```sh
-   git clone <repo_url>
+   git clone https://github.com/Nobiyyan/Ticket-Scanner.git
    ```
 2. **Use XAMPP** to run a local server.  
 3. **Import the database:**  
