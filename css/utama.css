@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111;
+}
+
+.scan {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scan .qrcode {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: url(/img/qrcode1.png); /* Base gray QR code */
+  background-size: cover;
+  overflow: hidden; /* Ensure the ::before stays inside the container */
+}
+
+.scan .qrcode::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: url(/img/qrcode2.png); /* Green scanning QR code */
+  background-size: cover;
+  z-index: 2;
+  animation: scanEffect 4s ease-in-out infinite;
+}
+
+@keyframes scanEffect {
+  0% {
+    height: 0; /* Starts at the top, no green */
+  }
+  50% {
+    height: 100%; /* Fully covers the QR code with green */
+  }
+  100% {
+    height: 0; /* Shrinks back to the top, revealing gray */
+  }
+}
+
+.scan .qrcode::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background: #35fd5c;
+  filter: drop-shadow(0 0 20px #35fd5c) drop-shadow(0 0 60px #35fd5c);
+  animation: scanLine 4s ease-in-out infinite;
+}
+
+@keyframes scanLine {
+  0% {
+    top: 20px;
+  }
+  50% {
+    top: calc(100% - 20px); /* Moves down */
+  }
+  100% {
+    top: 20px; /* Moves back up */
+  }
+}
+
+.border {
+  position: absolute;
+  inset: 0;
+  background: url(/img/border.png);
+  background-size: 400px;
+  background-repeat: no-repeat;
+  animation: blinkText 1s infinite;
+}
+
+.scan h3 {
+  text-transform: uppercase;
+  font-size: 2em;
+  margin-top: 20px;
+  color: #fff;
+  letter-spacing: 2px;
+  filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 60px #fff);
+  animation: blinkText 1s steps(1) infinite;
+}
+
+@keyframes blinkText {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

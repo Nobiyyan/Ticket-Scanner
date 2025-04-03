@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scan Success</title>
+    <meta http-equiv="refresh" content="4;url=index.php" />
+    <link rel="stylesheet" href="/css/utama.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Barcode Scanner</h2>
+      <!-- Animation container -->
+      <div id="animation-container"></div>
+      <h3 id="message">Scan berhasil, silakan masuk!</h3>
+    </div>
+
+    <script>
+      // Load Lottie animation
+      lottie.loadAnimation({
+        container: document.getElementById("animation-container"), // The container to render in
+        renderer: "svg", // Render as SVG
+        loop: true, // Loop the animation
+        autoplay: true, // Play automatically
+        path: "./img/succes.json", // Path to your JSON animation file
+      });
+    </script>
+  </body>
+</html>
