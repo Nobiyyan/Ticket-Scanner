@@ -31,4 +31,8 @@ This is a simple barcode and QR code scanning application used for ticket valida
 4. **Validation results:**  
    - ✅ If the ticket is valid → access is granted.  
    - ❌ If the ticket has already been used → access is denied.  
-5. **Scan data is stored** for future reference and analysis.  
+5. **Scan data is stored** for future reference and analysis.
+
+## Screenshot
+
+![Temperature Converter](img/screenshot.PNG)
