@@ -1,5 +1,5 @@
 # 🚀 Ticket Scanner  
-Ticket Scanner is a barcode and QR code scanning application used for ticket validation at various events. This application ensures that tickets can only be used once, preventing misuse.  
+This is a simple barcode and QR code scanning application used for ticket validation at various events. This application ensures that tickets can only be used once, preventing misuse.  
 
 ## 📌 Features  
 - 🔍 **Supports Multiple Barcode & QR Code Formats**: Reads various barcode and QR code formats for greater flexibility.  
